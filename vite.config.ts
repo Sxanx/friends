@@ -4,7 +4,7 @@ import path from "path";
 import { componentTagger } from "lovable-tagger";
 
 export default defineConfig(({ mode }) => ({
-  base: "/friendship-main/", // 👈 เพิ่มบรรทัดนี้
+  base: "/friends/",   // 👈 เพิ่มบรรทัดนี้
 
   server: {
     host: "::",
@@ -16,7 +16,7 @@ export default defineConfig(({ mode }) => ({
 
   plugins: [
     react(),
-    mode === "development" && componentTagger(),
+    mode === "development" && componentTagger()
   ].filter(Boolean),
 
   resolve: {
